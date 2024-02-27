@@ -92,7 +92,7 @@ $ cd processo_seletivo
 $ composer install
 ```
 
-4 - Crie o arquivo arquivo .env copiando o arquivo [.env.local.example.php](./processo_seletivo/.env.local.example.php) e configure com as informações do seu banco local
+4 - Crie o arquivo arquivo .env copiando o arquivo [.env.local.example.php](.env.local.example.php) e configure com as informações do seu banco local
 
 5 - Rode as migrations
 ```bash
