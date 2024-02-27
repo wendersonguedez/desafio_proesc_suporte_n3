@@ -66,10 +66,10 @@ Estou entrando em contato para solicitar uma série de ajustes e tarefas técnic
 **Situação II:** Devido ao atraso causado por esse problema, precisamos de uma solução imediata para adicionar pessoas diretamente no banco de dados. Uma lista de pessoas será compartilhada através do drive para inclusão manual. [Link do drive](https://docs.google.com/spreadsheets/d/1MB8xHwLek8PLgcOfBiyxWhk6ZplomVrSXtdtvEZjiXY/edit?usp=sharing).
 
  **Requisitos**
-- Código PHP, SCRPIT ou SQL.
+- Código PHP, SCRIPT ou SQL.
 
 **Entregável**
-- Lógica em código PHP, SCRPIT ou SQL como resultado da solicitação acima.
+- Lógica em código PHP, SCRIPT ou SQL como resultado da solicitação acima.
 
 Cada uma dessas solicitações é crucial para a operação contínua e a eficiência de nossos processos internos. Agradeço antecipadamente a atenção e a rapidez na resolução desses itens. Por favor, mantenham-me informado sobre o progresso de cada tarefa.
 
@@ -79,7 +79,7 @@ Para iniciá-lo, siga os passos abaixo:
 
 1 -  Clone o projeto para o seu computador:
 ```bash
-$ https://github.com/v-gama/processo_seletivo.git
+$ git clone https://github.com/v-gama/processo_seletivo.git
 ```
 
 2 - Entre na pasta do projeto
