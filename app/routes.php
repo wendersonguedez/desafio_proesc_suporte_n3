@@ -15,3 +15,7 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('/boletim', 'BoletimController@visualizarBoletim');
+
+Route::get('/cadastro', 'PessoasController@cadastro');

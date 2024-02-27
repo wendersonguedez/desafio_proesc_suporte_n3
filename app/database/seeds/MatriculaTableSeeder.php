@@ -6,8 +6,9 @@ class MatriculaTableSeeder extends Seeder {
     {
         DB::table('matriculas')->delete();
  
-        Turma::create(array(
-            'nome' => '1A'
+        Matricula::create(array(
+            'turma_id' => 1,
+            'pessoa_id' => 2
         ));
     }
 }

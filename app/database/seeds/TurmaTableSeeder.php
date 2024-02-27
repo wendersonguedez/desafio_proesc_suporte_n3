@@ -8,7 +8,7 @@ class TurmaTableSeeder extends Seeder {
  
         Turma::create(array(
             'nome' => '7A',
-            'criterio_avalliativo_id' => 2
+            'criterio_avaliativo_id' => 2
         ));
     }
 }

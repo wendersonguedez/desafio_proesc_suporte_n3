@@ -18,7 +18,7 @@ Estou entrando em contato para solicitar uma série de ajustes e tarefas técnic
 
 ### 3. Novo Requisito - Tipo de Arredondamento
 
-**Descrição:** Implementar um sistema de arredondamento para as notas finais, onde frações iguais ou superiores a 0,9 serão arredondadas para o número inteiro mais próximo. Por exemplo, uma nota final de 55,9 deve ser arredondada para 56.
+**Descrição:** Implementar um sistema de arredondamento para as notas finais, onde frações iguais ou superiores a 0,7 serão arredondadas para o número inteiro mais próximo. Por exemplo, uma nota final de 55,7 deve ser arredondada para 56.
 
 ### 4. Ajuste de Boletim - Layout e Notas Vermelhas
 

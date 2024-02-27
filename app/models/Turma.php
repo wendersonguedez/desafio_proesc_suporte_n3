@@ -9,6 +9,11 @@ class Turma extends Eloquent {
 	 */
 	protected $table = 'turmas';
 
-    protected $fillable = array('id', 'nome');
+    protected $fillable = array('id', 'nome', 'criterio_avaliativo_id');
+
+	public function criterio_avaliativo()
+    {
+        return $this->belongsTo('CriterioAvaliativo');
+    }
 
 }
