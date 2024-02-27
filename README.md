@@ -79,7 +79,7 @@ Para iniciá-lo, siga os passos abaixo:
 
 1 -  Clone o projeto para o seu computador:
 ```bash
-$ https://github.com/v-gama/processo_seletivo.git
+$ git clone https://github.com/v-gama/processo_seletivo.git
 ```
 
 2 - Entre na pasta do projeto
