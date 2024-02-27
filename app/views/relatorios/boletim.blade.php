@@ -34,44 +34,30 @@
                         @foreach ($diarios as $diario)
                             <th scope="col"> {{ $diario->periodo_nome }} </th>
                         @endforeach
+                            <th scope="col"> {{ 'NOTA FINAL' }} </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">Matéria 1</th>
-                        <td>8.5</td>
-                        <td>7.8</td>
-                        <td>9.2</td>
-                        <td>8.9</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Matéria 2</th>
-                        <td>7.2</td>
-                        <td>8.0</td>
-                        <td>7.5</td>
-                        <td>7.0</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Matéria 3</th>
-                        <td>9.0</td>
-                        <td>9.5</td>
-                        <td>8.8</td>
-                        <td>8.5</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Matéria 4</th>
-                        <td>6.8</td>
-                        <td>7.2</td>
-                        <td>8.0</td>
-                        <td>7.8</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Matéria 5</th>
-                        <td>8.2</td>
-                        <td>8.7</td>
-                        <td>9.3</td>
-                        <td>8.6</td>
-                    </tr>
+                    @foreach ($disciplinas as $disciplina)
+                        <tr>
+                            <th scope="row"> {{$disciplina->disciplina_nome}} </th>
+                                @foreach ($avaliacoes as $avaliacao)
+                                    @if ($avaliacao->disciplina_id == $disciplina->disciplina_id)
+                                        @foreach ($notas_periodos as $nota_periodo)
+                                            @if ($nota_periodo->avaliacao_id == $avaliacao->avaliacao_id && $nota_periodo->disciplina_id == $avaliacao->disciplina_id)
+                                                <td> {{ $nota_periodo->valor_nota }} </td>
+                                            @endif
+                                        @endforeach
+                                    @endif
+                                @endforeach
+
+                                @foreach ($notas_finais as $nota_final)
+                                    @if ($nota_final['disciplina_id'] == $disciplina->disciplina_id)
+                                        <td> {{$nota_final['valor_nota']}} </td>
+                                    @endif
+                                @endforeach
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
