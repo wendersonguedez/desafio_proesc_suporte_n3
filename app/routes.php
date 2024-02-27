@@ -17,5 +17,5 @@ Route::get('/', function()
 });
 
 Route::get('/boletim', 'BoletimController@visualizarBoletim');
-
-Route::get('/cadastro', 'PessoasController@cadastro');
+Route::get('cadastro', 'PessoasController@visualizarFormulario');
+Route::post('/cadastrar-pessoa', 'PessoasController@cadastrarPessoa');

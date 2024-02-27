@@ -2,8 +2,12 @@
 
 class PessoasController extends BaseController {
 
-    public function cadastro() 
-    {
-        return View::make('cadastro');
+    public function visualizarFormulario() {
+        return View::make('formularios.cadastro');
+    }
+
+    public function cadastrarPessoa() {
+
+        return Redirect::to('/cadastro')->with('success', 'Cadastro realizado com sucesso!');
     }
 }
