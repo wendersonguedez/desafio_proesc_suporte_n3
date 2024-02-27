@@ -16,7 +16,6 @@ class CreateDebitosTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('nome');
-			$table->double('valor_total');
 
 			$table->integer('pessoa_id')->unsigned();
 			$table->foreign('pessoa_id')->references('id')->on('pessoas');

@@ -16,7 +16,7 @@ class CreateParcelasTable extends Migration {
 		{
 			$table->increments('id');
 			$table->double('valor');
-			$table->boolean('pago')->default(false);
+			$table->boolean('pago');
 
 			$table->integer('debito_id')->unsigned();
 			$table->foreign('debito_id')->references('id')->on('debitos');
