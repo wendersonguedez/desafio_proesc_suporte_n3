@@ -17,5 +17,8 @@ Route::get('/', function()
 });
 
 Route::get('/boletim', 'BoletimController@visualizarBoletim');
-Route::get('cadastro', 'PessoasController@visualizarFormulario');
+Route::get('/cadastro', 'PessoasController@visualizarFormulario');
 Route::post('/cadastrar-pessoa', 'PessoasController@cadastrarPessoa');
+
+Route::get('/formulario-excel', 'PessoasController@visualizarFormularioExcel');
+Route::post('/upload-excel', 'PessoasController@inserirUsuariosDoArquivoExcel');
