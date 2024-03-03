@@ -71,6 +71,7 @@ return array(
 			'password' => getenv('db_pass'),
 			'charset'  => 'utf8',
 			'prefix'   => '',
+            'collation' => 'utf8_unicode_ci',
 			'schema'   => 'public',
 		),
 
