@@ -2,8 +2,9 @@
 
 use App\Services\NotasFormatar;
 
-class BoletimController extends BaseController {
- 
+class BoletimController extends BaseController
+{
+
     public function visualizarBoletim()
     {
         $dados_aluno = Pessoa::select('pessoas.nome as nome', 'turmas.id as turma_id', 'turmas.nome as turma_nome', 'turmas.criterio_avaliativo_id as criterio_avaliativo_id')
@@ -20,7 +21,7 @@ class BoletimController extends BaseController {
             'disciplinas_bases.nome as disciplina_base_nome',
             'periodos.nome as periodo_nome',
             'periodos.id as periodo_id'
-            )
+        )
             ->join('matriculas', 'notas.matricula_id', '=', 'matriculas.id')
             ->join('avaliacoes', 'notas.avaliacao_id', '=', 'avaliacoes.id')
             ->join('diarios', 'avaliacoes.diario_id', '=', 'diarios.id')
@@ -38,11 +39,11 @@ class BoletimController extends BaseController {
             'disciplinas_bases.nome as disciplina_nome',
             'pessoas.nome as docente_nome'
         )
-        ->join('disciplinas_bases', 'disciplinas.disciplina_base_id', '=', 'disciplinas_bases.id')
-        ->join('docentes', 'disciplinas.docente_id', '=', 'docentes.id')
-        ->join('pessoas', 'docentes.pessoa_id', '=', 'pessoas.id')
-        ->where('disciplinas.turma_id', '=', $dados_aluno->turma_id)
-        ->get();
+            ->join('disciplinas_bases', 'disciplinas.disciplina_base_id', '=', 'disciplinas_bases.id')
+            ->join('docentes', 'disciplinas.docente_id', '=', 'docentes.id')
+            ->join('pessoas', 'docentes.pessoa_id', '=', 'pessoas.id')
+            ->where('disciplinas.turma_id', '=', $dados_aluno->turma_id)
+            ->get();
 
         $criterio_avaliativo = CriterioAvaliativo::find($dados_aluno->criterio_avaliativo_id);
 
@@ -53,7 +54,7 @@ class BoletimController extends BaseController {
 
         $avaliacoes = Avaliacao::select(
             'avaliacoes.id as avaliacao_id', 'avaliacoes.nome as avaliacao_nome', 'avaliacoes.diario_id as diario_id', 'avaliacoes.disciplina_id as disciplina_id'
-            )
+        )
             ->join('disciplinas', 'avaliacoes.disciplina_id', '=', 'disciplinas.id')
             ->where('disciplinas.turma_id', $dados_aluno->turma_id)
             ->get();
